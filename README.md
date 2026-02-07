@@ -21,6 +21,7 @@ Servicio	Descripción	Puerto
 premieres-service	Lista de estrenos disponibles	8081
 candystore-service	Productos de la dulcería	8082
 complete-service	Finalización de compra	8083
+
 📁 Estructura del Proyecto
 cineplanet-reto/
 │
@@ -81,6 +82,50 @@ Docker
 Docker Compose
 
 Maven
+
+Comandos usados en MySQL
+CREATE DATABASE cineplanet;
+USE cineplanet;
+CREATE TABLE premieres (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  image_url VARCHAR(255),
+  description VARCHAR(255)
+);
+INSERT INTO premieres (image_url, description) VALUES
+('https://image1.jpg', 'Estreno uno'),
+('https://image2.jpg', 'Estreno dos'),
+('https://image3.jpg', 'Estreno tres');
+DELIMITER $$
+
+CREATE PROCEDURE get_premieres()
+BEGIN
+  SELECT id, image_url, description FROM premieres;
+END $$
+
+DELIMITER ;
+
+CREATE TABLE candystore (
+  id BIGINT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100),
+  description VARCHAR(255),
+  price DECIMAL(10,2)
+);
+
+INSERT INTO candystore (name, description, price) VALUES
+('Popcorn Mediano', 'Popcorn clásico', 12.50),
+('Gaseosa Grande', 'Bebida fría 1L', 9.00),
+('Combo Familiar', 'Popcorn + 2 gaseosas', 22.00);
+
+DROP PROCEDURE IF EXISTS get_products;
+
+DELIMITER $$
+
+CREATE PROCEDURE get_products()
+BEGIN
+  SELECT id, name, description, price FROM candystore;
+END $$
+
+DELIMITER ;
 
 ▶️ Ejecución del Proyecto con Docker
 1️⃣ Construir los JARs del backend
