@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 🎬 Cineplanet – Reto Técnico FullStack
 
 Este proyecto corresponde al reto técnico FullStack para el proceso de selección de Cineplanet.
@@ -159,3 +160,6 @@ El proyecto está pensado como un reto técnico, priorizando claridad, funcional
 Se evitó sobreingeniería innecesaria.
 
 La solución es completamente funcional y escalable.
+=======
+
+>>>>>>> c41096dddb68e502a5cd0cc53f95654ae1be6ece
