@@ -23,16 +23,14 @@ complete-service	Finalización de compra	8083
 
 Estructura del Proyecto
 cineplanet-reto/
-│
-├── premieres-service/
-├── candystore-service/
-├── complete-service/
-│
-├── frontend/
-│   └── cineplanet-web/
-│
-├── docker-compose.yml
-└── README.md
+  premieres-service/
+  candystore-service/
+  complete-service/
+
+  frontend/
+    cineplanet-web/
+  docker-compose.yml
+  README.md
 
 
 Cada microservicio es una aplicación Spring Boot independiente.
@@ -68,7 +66,7 @@ Docker
 
 Docker Compose
 
-⚙️ Requisitos Previos
+Requisitos Previos
 
 Antes de ejecutar el proyecto, asegúrate de tener instalado:
 
